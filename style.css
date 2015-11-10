@@ -1,0 +1,40 @@
+body{
+	background-color:white;
+	padding-left: 10%;
+	padding-right: 10%
+	
+	font-family: 'Lato', sans-serif;
+	font-weight: 300;
+}
+	
+h1 {
+	font-family: 'Marcellus', serif;
+	font-size: 60px;
+	color:orange;
+	text-align:center;
+}
+
+h2 {
+	font-family: 'Marcellus', serif;
+	font-size: 40px;
+	color:black;
+	text-align:center;
+}
+
+p {
+	color:black;
+	font-size: 25px;
+}
+
+a:hover {
+	color:#465438;
+}
+
+h3 {
+	font-size:30px;
+}
+
+@media screen and (max-width:480px) {body{
+	width: 100%;
+}
+}
