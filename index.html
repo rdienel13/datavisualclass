@@ -4,6 +4,7 @@
 	<title>Robin Dienel, Data Visualization</title>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, 	minimum-scale=1, maximum-scale=1, user-scalable=no">
+	<script 	src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	
 <style>
 
@@ -32,7 +33,7 @@ h2 {
 
 p {
 	color:black;
-	font-size: 25px;
+	font-size: 18px;
 }
 
 a:hover {
@@ -41,6 +42,10 @@ a:hover {
 
 h3 {
 	font-size:30px;
+}
+
+h4 {
+	font-size:25px;
 }
 
 /* 
@@ -119,6 +124,103 @@ display: none;
 		<p>This case has the ability affect the millions of women, specifically 20-29 year-olds, across the state of Texas in need of reproductive health care each year.</p>
 <br>
 <h3>Class 3</h3>
+<h4>Macy's beats 3Q profit forecasts</h4>
+<div id="article"></div>
+<script>
+	function WriteNewsStory(companyName,symbol,day,quarter,netIncome,city,netIncomePerShare,earningsPerShare,expectations,numberAnalysts,surveyor,estimatedEarningsPerShare,revenue,estimatedRevenue,quarterend,nextQuarterExpectationBottom,nextQuarterExpectationTop,fullYearEarningsExpectationsBottom,fullYearEarningsExpectationsTop,changePercentSinceYear,SPIndexChange,changePercentSinceMonths)
+	{
+	//var message="Hello World";
+	if(quarter==3){
+		quarter="third";
+		}	
+	else if(quarter==1){
+		quarter="first";
+	}
+	else if(quarter==2){
+		quarter="second";
+	}
+	else{
+		quarter="fourth";
+	} //close quarter else
+	
+	var netIncomepretty;
+	if(netIncome>=1000000){
+		netIncome=netIncome/1000000
+		netIncomepretty=netIncome+" million"
+	} //close incomepretty else
+	
+	var revenuepretty
+	if (revenue>=100000000){
+		revenue=revenue/100000000
+		revenue=revenue+" billion"
+	} //close revenuepretty //
+	
+	var expectedpretty
+	if (estimatedRevenue>=1000000000) {
+		estimatedRevenue=estimatedRevenue/1000000000
+		estimatedRevenue=estimatedRevenue+" billion"
+	}
+	if (earningsPerShare>50) {
+		expectations="topped";
+	}
+	else if (earningsPerShare<=50) {
+		expectations="under performed";
+	} // close Wall Street expectations //
+	
+	var quarterend
+	if (quarterend=="November") {
+		quarterend="January";
+	}
+	else if (quarterend=="December") {
+		quarterend="January";
+	}
+	else if (quarterend=="January") {
+		quarterend="January";
+	}	
+	else if (quarterend=="February") {
+		quarterend="April";
+	}
+	else if (quarterend=="March") {
+		quarterend="April";
+	}
+	else if (quarterend=="April") {
+		quarterend="April";
+	}
+	else if (quarterend=="May") {
+		quarterend="July";
+	}
+	else if (quarterend=="June") {
+		quarterend="July";
+	}
+	else if (quarterend=="July") {
+		quarterend="July";
+	}
+	else if (quarterend=="August") {
+		quarterend="July";
+	} // close quarterend month //
+
+	
+	// console.log( // 
+	$("#article").append("<p>"+companyName+" ("+symbol+") on "+day+" reported fiscal "+quarter+"-quarter net income of $"+netIncomepretty+".</p>");
+	
+	$("#article").append("<p>On a per-share basis, the "+city+"-based company said it had net income of "+netIncomePerShare+" cents. Earnings, adjusted for asset impairment costs, were "+earningsPerShare+" cents per share.</p>");
+	
+	$("#article").append("<p>The results "+expectations+" Wall Street expectations. The average estimate of "+numberAnalysts+" analysts surveyed by "+surveyor+" was for earnings of "+estimatedEarningsPerShare+" cents per share.<p>");
+	
+	$("#article").append("<p>The department store operator posted revenue of $"+revenue+" in the period, which did not meet Street forecasts. Five surveyed by Zacks expected $"+estimatedRevenue+".</p>"); 
+	
+	$("#article").append("<p>For the current quarter ending in "+quarterend+", "+companyName+"'s expects it's per-share earnings to range from $"+nextQuarterExpectationBottom+" to $"+nextQuarterExpectationTop+".</p>");
+	
+	$("#article").append("<p>The company expects full-year earnings in the range of $"+fullYearEarningsExpectationsBottom+" to $"+fullYearEarningsExpectationsTop+" per share.</p>");
+	
+	$("#article").append("<p>"+companyName+"'s shares have decreased "+changePercentSinceYear+" percent since the beginning of the year, while the Standard & Poor's 500 index has increased "+SPIndexChange+" percent. The stock has fallen "+changePercentSinceMonths+" percent in the last 12 months.</p>") 
+}	
+	
+	
+	WriteNewsStory("Macys Inc.","M","Wednesday",3,118000000,"Cincinnati",36,56,"topped","eight","Zacks Investment Research",54,5800000000,6150000000,"January",2.54,2.64,"4.20","4.30",28,1,21);
+	
+	
+</script>
 <br>
 <h3>Class 4</h3>
 <br>
