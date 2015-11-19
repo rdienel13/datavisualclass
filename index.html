@@ -168,35 +168,17 @@ display: none;
 	} // close Wall Street expectations //
 	
 	var quarterend
-	if (quarterend=="November") {
+	if (quarterend=="November" || quarterend=="December" || quarterend=="January") {
 		quarterend="January";
 	}
-	else if (quarterend=="December") {
-		quarterend="January";
-	}
-	else if (quarterend=="January") {
-		quarterend="January";
-	}	
-	else if (quarterend=="February") {
+	else if (quarterend=="February" || quarterend=="March" || quarterend=="April") {
 		quarterend="April";
 	}
-	else if (quarterend=="March") {
-		quarterend="April";
-	}
-	else if (quarterend=="April") {
-		quarterend="April";
-	}
-	else if (quarterend=="May") {
+	else if (quarterend=="May" || quarterend=="June" || quarterend=="July") {
 		quarterend="July";
 	}
-	else if (quarterend=="June") {
-		quarterend="July";
-	}
-	else if (quarterend=="July") {
-		quarterend="July";
-	}
-	else if (quarterend=="August") {
-		quarterend="July";
+	else if (quarterend=="August" || quarterend=="September" || quarterend=="October") {
+		quarterend="October";
 	} // close quarterend month //
 
 	
@@ -214,10 +196,9 @@ display: none;
 	$("#article").append("<p>The company expects full-year earnings in the range of $"+fullYearEarningsExpectationsBottom+" to $"+fullYearEarningsExpectationsTop+" per share.</p>");
 	
 	$("#article").append("<p>"+companyName+"'s shares have decreased "+changePercentSinceYear+" percent since the beginning of the year, while the Standard & Poor's 500 index has increased "+SPIndexChange+" percent. The stock has fallen "+changePercentSinceMonths+" percent in the last 12 months.</p>") 
-}	
+}		
 	
-	
-	WriteNewsStory("Macys Inc.","M","Wednesday",3,118000000,"Cincinnati",36,56,"topped","eight","Zacks Investment Research",54,5800000000,6150000000,"January",2.54,2.64,"4.20","4.30",28,1,21);
+WriteNewsStory("Macys Inc.","M","Wednesday",3,118000000,"Cincinnati",36,56,"topped","eight","Zacks Investment Research",54,5800000000,6150000000,"January",2.54,2.64,"4.20","4.30",28,1,21);
 	
 	
 </script>
